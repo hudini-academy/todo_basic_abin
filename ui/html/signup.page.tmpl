@@ -1,9 +1,10 @@
  {{template "base" .}} 
  
 {{define "title"}}Signup{{end}} 
- 
+<link rel="stylesheet" href='/static/main.css'> 
 {{define "body"}} 
 <form action='/user/signup' method='POST' novalidate> 
+
 
         <div> 
             <label>Name:</label> 

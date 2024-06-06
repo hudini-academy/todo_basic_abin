@@ -418,3 +418,7 @@ net/http.(*conn).serve(0xc000076090, {0xa2e588, 0xc00002c630})
 	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
 created by net/http.(*Server).Serve in goroutine 1
 	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/06 19:49:40 handlers.go:205: models:invalid credentials
+ERROR	2024/06/06 19:53:36 handlers.go:205: models:invalid credentials
+ERROR	2024/06/06 19:55:07 handlers.go:205: models:invalid credentials
+ERROR	2024/06/06 19:56:09 handlers.go:205: models:invalid credentials

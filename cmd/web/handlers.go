@@ -2,7 +2,6 @@ package main
 
 import (
 	"TODO/pkg/models"
-	"fmt"
 	"html/template"
 	"log"
 
@@ -11,6 +10,8 @@ import (
 	"strconv"
 	"strings"
 	"unicode/utf8"
+
+	"golang.org/x/crypto/bcrypt"
 )
 
 // Create a datastructure to hold the data
@@ -164,7 +165,13 @@ func (app *application) signupUser(w http.ResponseWriter, r *http.Request) {
 	userName := r.FormValue("name")
 	userEmail := r.FormValue("email")
 	userPassword := r.FormValue("password")
-	err := app.users.Insert(userName, userEmail, userPassword)
+	hashedPassword, errHashing := bcrypt.GenerateFromPassword([]byte(userPassword), 12)
+	if errHashing != nil {
+		log.Println(errHashing)
+		return
+	}
+
+	err := app.users.Insert(userName, userEmail, hashedPassword)
 	if err != nil {
 		app.serverError(w, err)
 		log.Println(err)
@@ -189,7 +196,7 @@ func (app *application) loginUserForm(w http.ResponseWriter, r *http.Request) {
 
 }
 func (app *application) loginUser(w http.ResponseWriter, r *http.Request) {
-	userName := r.FormValue("name")
+	userName := r.FormValue("email")
 	userPassword := r.FormValue("password")
 	isUser, err := app.users.Authenticate(userName, userPassword)
 	log.Print(isUser)
@@ -197,7 +204,7 @@ func (app *application) loginUser(w http.ResponseWriter, r *http.Request) {
 		app.errorLog.Println(err.Error())
 		http.Error(w, "Internal Server Error", 500)
 	}
-	if isUser {
+	if isUser != 0 {
 		app.session.Put(r, "Authenticate", true)
 		app.session.Put(r, "flash", " Login Successfull!")
 		http.Redirect(w, r, "/", http.StatusSeeOther)
@@ -210,5 +217,6 @@ func (app *application) loginUser(w http.ResponseWriter, r *http.Request) {
 }
 
 func (app *application) logoutUser(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Logout the user...")
+	app.session.Put(r, "Authenticated", false)
+	http.Redirect(w, r, "/user/login", http.StatusSeeOther)
 }
