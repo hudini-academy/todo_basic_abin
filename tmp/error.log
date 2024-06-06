@@ -1,0 +1,420 @@
+ERROR	2024/06/06 16:04:50 handlers.go:150: template: base.layout.tmpl:7: unexpected EOF
+ERROR	2024/06/06 16:04:50 handlers.go:153: template: base.layout.tmpl:7: unexpected EOF
+goroutine 18 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc000090060, {0x9edc20, 0xc00003b440}, {0x9eb5c0?, 0xc000031300?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).signupUserForm(0xc000090060, {0x9edc20, 0xc00003b440}, 0xc00002d890?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:153 +0x22c
+net/http.HandlerFunc.ServeHTTP(0xc0000ca000?, {0x9edc20?, 0xc00003b440?}, 0x57d7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0x9edbf0, 0xc000008390}, 0xc0000ca000)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc000090240?, {0x9edbf0?, 0xc000008390?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc0000a8018, {0x9edbf0, 0xc000008390}, 0xc0000ca000)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0x9edd70, 0xc000154000}, 0xc0000ca000)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:23 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc00001a500?, {0x9edd70?, 0xc000154000?}, 0xc000035a60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0x9edd70, 0xc000154000}, 0xc0000ca000)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:31 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0x9edd70?, 0xc000154000?}, 0x56e337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0x9edd70?, 0xc000154000?}, 0x59662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0x569139?, {0x9edd70?, 0xc000154000?}, 0xc000035b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc0000906f0?}, {0x9edd70?, 0xc000154000?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00008e090, {0x9ee588, 0xc000090600})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/06 16:04:51 handlers.go:150: template: base.layout.tmpl:7: unexpected EOF
+ERROR	2024/06/06 16:04:51 handlers.go:153: template: base.layout.tmpl:7: unexpected EOF
+goroutine 18 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc000090060, {0x9edc20, 0xc0001a6240}, {0x9eb5c0?, 0xc0001a0390?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).signupUserForm(0xc000090060, {0x9edc20, 0xc0001a6240}, 0xc000188150?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:153 +0x22c
+net/http.HandlerFunc.ServeHTTP(0xc00018a000?, {0x9edc20?, 0xc0001a6240?}, 0x57d7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0x9edbf0, 0xc0001a8018}, 0xc00018a000)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc000090240?, {0x9edbf0?, 0xc0001a8018?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc0000a8018, {0x9edbf0, 0xc0001a8018}, 0xc00018a000)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0x9edd70, 0xc0001a2000}, 0xc00018a000)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:23 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc00018c000?, {0x9edd70?, 0xc0001a2000?}, 0xc000035a60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0x9edd70, 0xc0001a2000}, 0xc00018a000)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:31 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0x9edd70?, 0xc0001a2000?}, 0x56e337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0x9edd70?, 0xc0001a2000?}, 0x59662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0x569139?, {0x9edd70?, 0xc0001a2000?}, 0xc000035b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc0000906f0?}, {0x9edd70?, 0xc0001a2000?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00008e090, {0x9ee588, 0xc000090600})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/06 16:04:55 handlers.go:150: template: base.layout.tmpl:7: unexpected EOF
+ERROR	2024/06/06 16:04:55 handlers.go:153: template: base.layout.tmpl:7: unexpected EOF
+goroutine 18 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc000090060, {0x9edc20, 0xc0001a6800}, {0x9eb5c0?, 0xc0001a07b0?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).signupUserForm(0xc000090060, {0x9edc20, 0xc0001a6800}, 0xc000188de0?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:153 +0x22c
+net/http.HandlerFunc.ServeHTTP(0xc00018aa20?, {0x9edc20?, 0xc0001a6800?}, 0x57d7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0x9edbf0, 0xc0001a8240}, 0xc00018aa20)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc000090240?, {0x9edbf0?, 0xc0001a8240?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc0000a8018, {0x9edbf0, 0xc0001a8240}, 0xc00018aa20)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0x9edd70, 0xc0001a22a0}, 0xc00018aa20)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:23 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc00018c2a0?, {0x9edd70?, 0xc0001a22a0?}, 0xc000035a60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0x9edd70, 0xc0001a22a0}, 0xc00018aa20)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:31 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0x9edd70?, 0xc0001a22a0?}, 0x56e337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0x9edd70?, 0xc0001a22a0?}, 0x59662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0x569139?, {0x9edd70?, 0xc0001a22a0?}, 0xc000035b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc0000906f0?}, {0x9edd70?, 0xc0001a22a0?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00008e090, {0x9ee588, 0xc000090600})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/06 16:05:03 handlers.go:150: template: base.layout.tmpl:7: unexpected EOF
+ERROR	2024/06/06 16:05:03 handlers.go:153: template: base.layout.tmpl:7: unexpected EOF
+goroutine 18 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc000090060, {0x9edc20, 0xc0001a6dc0}, {0x9eb5c0?, 0xc0001a0bd0?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).signupUserForm(0xc000090060, {0x9edc20, 0xc0001a6dc0}, 0xc000189a70?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:153 +0x22c
+net/http.HandlerFunc.ServeHTTP(0xc00018b320?, {0x9edc20?, 0xc0001a6dc0?}, 0x57d7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0x9edbf0, 0xc0001a8450}, 0xc00018b320)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc000090240?, {0x9edbf0?, 0xc0001a8450?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc0000a8018, {0x9edbf0, 0xc0001a8450}, 0xc00018b320)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0x9edd70, 0xc0001a2540}, 0xc00018b320)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:23 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc00018c500?, {0x9edd70?, 0xc0001a2540?}, 0xc000035a60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0x9edd70, 0xc0001a2540}, 0xc00018b320)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:31 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0x9edd70?, 0xc0001a2540?}, 0x56e337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0x9edd70?, 0xc0001a2540?}, 0x59662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0x569139?, {0x9edd70?, 0xc0001a2540?}, 0xc000035b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc0000906f0?}, {0x9edd70?, 0xc0001a2540?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00008e090, {0x9ee588, 0xc000090600})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/06 16:21:12 handlers.go:150: template: signup.page.tmpl:25: unexpected {{end}}
+ERROR	2024/06/06 16:21:12 handlers.go:153: template: signup.page.tmpl:25: unexpected {{end}}
+goroutine 10 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc000086720, {0x119dc20, 0xc0001a4340}, {0x119b5c0?, 0xc0001a03f0?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).signupUserForm(0xc000086720, {0x119dc20, 0xc0001a4340}, 0xc0001a4340?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:153 +0x22c
+net/http.HandlerFunc.ServeHTTP(0xc00018a480?, {0x119dc20?, 0xc0001a4340?}, 0xd2d7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0x119dbf0, 0xc0001a6048}, 0xc00018a480)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc000086900?, {0x119dbf0?, 0xc0001a6048?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc00008c078, {0x119dbf0, 0xc0001a6048}, 0xc00018a480)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0x119dd70, 0xc0001901c0}, 0xc00018a480)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:23 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc00018c080?, {0x119dd70?, 0xc0001901c0?}, 0xc00023ba60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0x119dd70, 0xc0001901c0}, 0xc00018a480)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:31 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0x119dd70?, 0xc0001901c0?}, 0xd1e337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0x119dd70?, 0xc0001901c0?}, 0xd4662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0xd19139?, {0x119dd70?, 0xc0001901c0?}, 0xc00023bb68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000188240?}, {0x119dd70?, 0xc0001901c0?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00014a360, {0x119e588, 0xc000086cc0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/06 16:21:17 handlers.go:150: template: signup.page.tmpl:25: unexpected {{end}}
+ERROR	2024/06/06 16:21:17 handlers.go:153: template: signup.page.tmpl:25: unexpected {{end}}
+goroutine 10 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc000086720, {0x119dc20, 0xc0001a4980}, {0x119b5c0?, 0xc0001a0a90?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).signupUserForm(0xc000086720, {0x119dc20, 0xc0001a4980}, 0xc0001a4980?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:153 +0x22c
+net/http.HandlerFunc.ServeHTTP(0xc00018aea0?, {0x119dc20?, 0xc0001a4980?}, 0xd2d7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0x119dbf0, 0xc0001a63a8}, 0xc00018aea0)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc000086900?, {0x119dbf0?, 0xc0001a63a8?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc00008c078, {0x119dbf0, 0xc0001a63a8}, 0xc00018aea0)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0x119dd70, 0xc000190620}, 0xc00018aea0)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:23 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc00018c580?, {0x119dd70?, 0xc000190620?}, 0xc00023ba60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0x119dd70, 0xc000190620}, 0xc00018aea0)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:31 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0x119dd70?, 0xc000190620?}, 0xd1e337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0x119dd70?, 0xc000190620?}, 0xd4662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0xd19139?, {0x119dd70?, 0xc000190620?}, 0xc00023bb68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000188240?}, {0x119dd70?, 0xc000190620?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00014a360, {0x119e588, 0xc000086cc0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/06 16:21:22 handlers.go:150: template: signup.page.tmpl:25: unexpected {{end}}
+ERROR	2024/06/06 16:21:22 handlers.go:153: template: signup.page.tmpl:25: unexpected {{end}}
+goroutine 10 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc000086720, {0x119dc20, 0xc0001a4d80}, {0x119b5c0?, 0xc0001a0e50?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).signupUserForm(0xc000086720, {0x119dc20, 0xc0001a4d80}, 0xc0001a4d80?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:153 +0x22c
+net/http.HandlerFunc.ServeHTTP(0xc00018b440?, {0x119dc20?, 0xc0001a4d80?}, 0xd2d7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0x119dbf0, 0xc0001a6588}, 0xc00018b440)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc000086900?, {0x119dbf0?, 0xc0001a6588?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc00008c078, {0x119dbf0, 0xc0001a6588}, 0xc00018b440)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0x119dd70, 0xc0001908c0}, 0xc00018b440)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:23 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc00018c7e0?, {0x119dd70?, 0xc0001908c0?}, 0xc00023ba60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0x119dd70, 0xc0001908c0}, 0xc00018b440)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:31 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0x119dd70?, 0xc0001908c0?}, 0xd1e337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0x119dd70?, 0xc0001908c0?}, 0xd4662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0xd19139?, {0x119dd70?, 0xc0001908c0?}, 0xc00023bb68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000188240?}, {0x119dd70?, 0xc0001908c0?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00014a360, {0x119e588, 0xc000086cc0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/06 16:23:02 handlers.go:150: template: signup.page.tmpl:25: unexpected {{end}}
+ERROR	2024/06/06 16:23:02 handlers.go:153: template: signup.page.tmpl:25: unexpected {{end}}
+goroutine 10 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc000086720, {0x119dc20, 0xc0000976c0}, {0x119b5c0?, 0xc0000911e0?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).signupUserForm(0xc000086720, {0x119dc20, 0xc0000976c0}, 0xc0000976c0?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:153 +0x22c
+net/http.HandlerFunc.ServeHTTP(0xc00023c120?, {0x119dc20?, 0xc0000976c0?}, 0xd2d7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0x119dbf0, 0xc00008c7f8}, 0xc00023c120)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc000086900?, {0x119dbf0?, 0xc00008c7f8?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc00008c078, {0x119dbf0, 0xc00008c7f8}, 0xc00023c120)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0x119dd70, 0xc0000f62a0}, 0xc00023c120)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:23 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc0000ae920?, {0x119dd70?, 0xc0000f62a0?}, 0xc00023ba60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0x119dd70, 0xc0000f62a0}, 0xc00023c120)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:31 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0x119dd70?, 0xc0000f62a0?}, 0xd1e337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0x119dd70?, 0xc0000f62a0?}, 0xd4662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0xd19139?, {0x119dd70?, 0xc0000f62a0?}, 0xc00023bb68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000188240?}, {0x119dd70?, 0xc0000f62a0?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00014a360, {0x119e588, 0xc000086cc0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/06 16:26:50 handlers.go:150: template: signup.page.tmpl:25: unexpected {{end}}
+ERROR	2024/06/06 16:26:50 handlers.go:153: template: signup.page.tmpl:25: unexpected {{end}}
+goroutine 5 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc00002c090, {0xa2dc20, 0xc00009f3c0}, {0xa2b5c0?, 0xc00008b210?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).signupUserForm(0xc00002c090, {0xa2dc20, 0xc00009f3c0}, 0xc000089770?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:153 +0x22c
+net/http.HandlerFunc.ServeHTTP(0xc0001ac000?, {0xa2dc20?, 0xc00009f3c0?}, 0x5bd7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0xa2dbf0, 0xc000094348}, 0xc0001ac000)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc00002c270?, {0xa2dbf0?, 0xc000094348?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc000008030, {0xa2dbf0, 0xc000094348}, 0xc0001ac000)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0xa2dd70, 0xc000112000}, 0xc0001ac000)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:23 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc00009a300?, {0xa2dd70?, 0xc000112000?}, 0xc000035a60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0xa2dd70, 0xc000112000}, 0xc0001ac000)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:31 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0xa2dd70?, 0xc000112000?}, 0x5ae337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0xa2dd70?, 0xc000112000?}, 0x5d662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0x5a9139?, {0xa2dd70?, 0xc000112000?}, 0xc000035b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000186120?}, {0xa2dd70?, 0xc000112000?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000076090, {0xa2e588, 0xc00002c630})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/06 16:26:53 handlers.go:150: template: signup.page.tmpl:25: unexpected {{end}}
+ERROR	2024/06/06 16:26:53 handlers.go:153: template: signup.page.tmpl:25: unexpected {{end}}
+goroutine 5 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc00002c090, {0xa2dc20, 0xc00009f7c0}, {0xa2b5c0?, 0xc00008b5d0?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).signupUserForm(0xc00002c090, {0xa2dc20, 0xc00009f7c0}, 0xc000122300?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:153 +0x22c
+net/http.HandlerFunc.ServeHTTP(0xc0000e6d80?, {0xa2dc20?, 0xc00009f7c0?}, 0x5bd7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0xa2dbf0, 0xc0000945a0}, 0xc0000e6d80)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc00002c270?, {0xa2dbf0?, 0xc0000945a0?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc000008030, {0xa2dbf0, 0xc0000945a0}, 0xc0000e6d80)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0xa2dd70, 0xc0001122a0}, 0xc0000e6d80)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:23 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc00009a600?, {0xa2dd70?, 0xc0001122a0?}, 0xc000035a60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0xa2dd70, 0xc0001122a0}, 0xc0000e6d80)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:31 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0xa2dd70?, 0xc0001122a0?}, 0x5ae337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0xa2dd70?, 0xc0001122a0?}, 0x5d662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0x5a9139?, {0xa2dd70?, 0xc0001122a0?}, 0xc000035b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000186120?}, {0xa2dd70?, 0xc0001122a0?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000076090, {0xa2e588, 0xc00002c630})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/06 16:27:01 handlers.go:150: template: signup.page.tmpl:25: unexpected {{end}}
+ERROR	2024/06/06 16:27:01 handlers.go:153: template: signup.page.tmpl:25: unexpected {{end}}
+goroutine 5 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc00002c090, {0xa2dc20, 0xc0001aa640}, {0xa2b5c0?, 0xc0001885f0?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).signupUserForm(0xc00002c090, {0xa2dc20, 0xc0001aa640}, 0xc0001aa640?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:153 +0x22c
+net/http.HandlerFunc.ServeHTTP(0xc0001acb40?, {0xa2dc20?, 0xc0001aa640?}, 0x5bd7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0xa2dbf0, 0xc0001900f0}, 0xc0001acb40)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc00002c270?, {0xa2dbf0?, 0xc0001900f0?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc000008030, {0xa2dbf0, 0xc0001900f0}, 0xc0001acb40)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0xa2dd70, 0xc0001f4000}, 0xc0001acb40)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:23 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc0001960a0?, {0xa2dd70?, 0xc0001f4000?}, 0xc000035a60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0xa2dd70, 0xc0001f4000}, 0xc0001acb40)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:31 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0xa2dd70?, 0xc0001f4000?}, 0x5ae337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0xa2dd70?, 0xc0001f4000?}, 0x5d662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0x5a9139?, {0xa2dd70?, 0xc0001f4000?}, 0xc000035b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000186120?}, {0xa2dd70?, 0xc0001f4000?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000076090, {0xa2e588, 0xc00002c630})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/06 16:27:06 handlers.go:150: template: signup.page.tmpl:25: unexpected {{end}}
+ERROR	2024/06/06 16:27:06 handlers.go:153: template: signup.page.tmpl:25: unexpected {{end}}
+goroutine 5 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc00002c090, {0xa2dc20, 0xc0001aaa40}, {0xa2b5c0?, 0xc0001889b0?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).signupUserForm(0xc00002c090, {0xa2dc20, 0xc0001aaa40}, 0xc0001aaa40?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:153 +0x22c
+net/http.HandlerFunc.ServeHTTP(0xc0001ad200?, {0xa2dc20?, 0xc0001aaa40?}, 0x5bd7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0xa2dbf0, 0xc0001902d0}, 0xc0001ad200)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc00002c270?, {0xa2dbf0?, 0xc0001902d0?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc000008030, {0xa2dbf0, 0xc0001902d0}, 0xc0001ad200)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0xa2dd70, 0xc0001f42a0}, 0xc0001ad200)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:23 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc000196340?, {0xa2dd70?, 0xc0001f42a0?}, 0xc000035a60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0xa2dd70, 0xc0001f42a0}, 0xc0001ad200)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:31 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0xa2dd70?, 0xc0001f42a0?}, 0x5ae337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0xa2dd70?, 0xc0001f42a0?}, 0x5d662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0x5a9139?, {0xa2dd70?, 0xc0001f42a0?}, 0xc000035b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000186120?}, {0xa2dd70?, 0xc0001f42a0?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000076090, {0xa2e588, 0xc00002c630})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
