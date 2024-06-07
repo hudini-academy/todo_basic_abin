@@ -439,3 +439,125 @@ ERROR	2024/06/07 00:59:24 handlers.go:204: crypto/bcrypt: hashedSecret too short
 ERROR	2024/06/07 01:06:37 handlers.go:204: crypto/bcrypt: hashedSecret too short to be a bcrypted password
 ERROR	2024/06/07 10:24:25 handlers.go:206: crypto/bcrypt: hashedSecret too short to be a bcrypted password
 ERROR	2024/06/07 10:24:47 handlers.go:176: Error 1062 (23000): Duplicate entry 'abin.andrews@hudini.io' for key 'users.users_uc_email'
+ERROR	2024/06/07 12:06:11 handlers.go:205: models:invalid credentials
+ERROR	2024/06/07 12:06:23 handlers.go:205: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/07 12:14:19 handlers.go:175: Error 1062 (23000): Duplicate entry 'abin.andrews@hudini.io' for key 'users.users_uc_email'
+ERROR	2024/06/07 12:21:40 handlers.go:205: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/07 12:24:23 handlers.go:205: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/07 12:29:15 handlers.go:53: template: home.page.tmpl:66: unexpected EOF
+ERROR	2024/06/07 12:29:15 handlers.go:56: template: home.page.tmpl:66: unexpected EOF
+goroutine 21 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc000089740, {0xe13d40, 0xc000159940}, {0xe11660?, 0xc0001650f0?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).home(0xc000089740, {0xe13d40, 0xc000159940}, 0xc000169d40)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:56 +0x345
+net/http.HandlerFunc.ServeHTTP(0x15932eabdc8?, {0xe13d40?, 0xc000159940?}, 0x40?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).middlewareAuthenticate-fm.(*application).middlewareAuthenticate.func1({0xe13d40, 0xc000159940}, 0xc000169d40)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:57 +0x7a
+net/http.HandlerFunc.ServeHTTP(0xc0001699e0?, {0xe13d40?, 0xc000159940?}, 0x99d7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0xe13d10, 0xc000009d28}, 0xc0001699e0)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc000089800?, {0xe13d10?, 0xc000009d28?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc000094378, {0xe13d10, 0xc000009d28}, 0xc0001699e0)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0xe13e90, 0xc00010c9a0}, 0xc0001699e0)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:24 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc00000ba30?, {0xe13e90?, 0xc00010c9a0?}, 0xc00014da60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0xe13e90, 0xc00010c9a0}, 0xc0001699e0)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:32 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0xe13e90?, 0xc00010c9a0?}, 0x98e337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0xe13e90?, 0xc00010c9a0?}, 0x9b662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0x989139?, {0xe13e90?, 0xc00010c9a0?}, 0xc00014db68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000202030?}, {0xe13e90?, 0xc00010c9a0?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00018e090, {0xe146a8, 0xc000089d40})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/07 12:29:16 handlers.go:53: template: home.page.tmpl:66: unexpected EOF
+ERROR	2024/06/07 12:29:16 handlers.go:56: template: home.page.tmpl:66: unexpected EOF
+goroutine 21 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc000089740, {0xe13d40, 0xc000159e40}, {0xe11660?, 0xc000165650?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).home(0xc000089740, {0xe13d40, 0xc000159e40}, 0xc000300360)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:56 +0x345
+net/http.HandlerFunc.ServeHTTP(0x15932eabdc8?, {0xe13d40?, 0xc000159e40?}, 0x40?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).middlewareAuthenticate-fm.(*application).middlewareAuthenticate.func1({0xe13d40, 0xc000159e40}, 0xc000300360)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:57 +0x7a
+net/http.HandlerFunc.ServeHTTP(0xc000300000?, {0xe13d40?, 0xc000159e40?}, 0x99d7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0xe13d10, 0xc000009f20}, 0xc000300000)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc000089800?, {0xe13d10?, 0xc000009f20?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc000094378, {0xe13d10, 0xc000009f20}, 0xc000300000)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0xe13e90, 0xc00010cc40}, 0xc000300000)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:24 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc00000bcc0?, {0xe13e90?, 0xc00010cc40?}, 0xc00014da60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0xe13e90, 0xc00010cc40}, 0xc000300000)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:32 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0xe13e90?, 0xc00010cc40?}, 0x98e337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0xe13e90?, 0xc00010cc40?}, 0x9b662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0x989139?, {0xe13e90?, 0xc00010cc40?}, 0xc00014db68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000202030?}, {0xe13e90?, 0xc00010cc40?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00018e090, {0xe146a8, 0xc000089d40})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/07 12:45:46 handlers.go:205: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/07 12:45:46 handlers.go:70: template: home.page.tmpl:58:18: executing "home.page.tmpl" at <.Heading>: can't evaluate field Heading in type *models.ToDo
+goroutine 21 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x5e
+main.(*application).serverError(0xc000089740, {0xf63d40, 0xc000210380}, {0xf620e0?, 0xc0002084c0?})
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/helpers.go:15 +0x52
+main.(*application).home(0xc000089740, {0xf63d40, 0xc000210380}, 0xc000212480)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/handlers.go:70 +0x3d6
+net/http.HandlerFunc.ServeHTTP(0x1d824a60508?, {0xf63d40?, 0xc000210380?}, 0x40?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).middlewareAuthenticate-fm.(*application).middlewareAuthenticate.func1({0xf63d40, 0xc000210380}, 0xc000212480)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:57 +0x7a
+net/http.HandlerFunc.ServeHTTP(0xc000212120?, {0xf63d40?, 0xc000210380?}, 0xaed7ca?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/golangcollege/sessions.(*Session).Enable-fm.(*Session).Enable.func1({0xf63d10, 0xc000234018}, 0xc000212120)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc000089800?, {0xf63d10?, 0xc000234018?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc000094378, {0xf63d10, 0xc000234018}, 0xc000212120)
+	C:/Users/AbinMosesAndrews/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.secureHeaders.func1({0xf63e90, 0xc000230000}, 0xc000212120)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:24 +0x20c
+net/http.HandlerFunc.ServeHTTP(0xc000200020?, {0xf63e90?, 0xc000230000?}, 0xc0001d1a60?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).logRequest-fm.(*application).logRequest.func1({0xf63e90, 0xc000230000}, 0xc000212120)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:32 +0x150
+net/http.HandlerFunc.ServeHTTP(0x10?, {0xf63e90?, 0xc000230000?}, 0xade337?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).recoverPanic-fm.(*application).recoverPanic.func1({0xf63e90?, 0xc000230000?}, 0xb0662f?)
+	C:/Users/AbinMosesAndrews/Documents/ToDo App/cmd/web/middleware.go:47 +0x7c
+net/http.HandlerFunc.ServeHTTP(0xad9139?, {0xf63e90?, 0xc000230000?}, 0xc0001d1b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000202030?}, {0xf63e90?, 0xc000230000?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00018e090, {0xf646a8, 0xc000089d40})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4

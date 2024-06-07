@@ -24,7 +24,8 @@ type application struct {
 	config   *Config
 	todo     *mysql.ToDoModel
 	session  *sessions.Session
-	users	 *mysql.UserModel
+	users    *mysql.UserModel
+	spcl_todo *mysql.SpclToDoModel
 }
 
 func main() {
@@ -56,20 +57,20 @@ func main() {
 
 	// Creating an instance named 'app' to call the struct
 	app := &application{
-		errorLog: errorLog,
-		infoLog:  infoLog,
-		config:   cfg,
-		session:  session,
-		todo:     &mysql.ToDoModel{DB: db},
-		users:    &mysql.UserModel{DB:db},
+		errorLog:  errorLog,
+		infoLog:   infoLog,
+		config:    cfg,
+		session:   session,
+		todo:      &mysql.ToDoModel{DB: db},
+		users:     &mysql.UserModel{DB: db},
+		spcl_todo: &mysql.SpclToDoModel{DB: db},
 	}
-    
+
 	// Rewrite the source code with our own server address, handler and error logs.
 	srv := &http.Server{
 		Addr:     cfg.Addr,
 		ErrorLog: errorLog,
 		Handler:  app.routes(),
-		
 	}
 
 	infoLog.Printf("Starting server on %s", srv.Addr)

@@ -27,6 +27,7 @@
         <textarea style="font-size: 30px" name="task" required></textarea>
         <input type="submit" >
     </form>
+
 <ol>
 {{if .Flash}}
 <div class ="flash">{{.Flash}}</div>
@@ -44,6 +45,17 @@
             <form method="POST" action="/updatetask?id={{.ID}}">
           <input type="text" name="update">
             <input type="submit" value="Update">
+            </form>
+            {{end}}
+</ol>
+<ol>
+<ol>
+    {{range .Tasks}}
+            <li>{{.Title}}<br>{{.Created}}<br>{{.Expires}}
+            </li>
+             <form action="/spclDeletask?id={{.ID}}" method="POST">
+                <input type="hidden" name="method" value="delete">
+                <input type="submit" value="Delete">
             </form>
             {{end}}
 </ol>

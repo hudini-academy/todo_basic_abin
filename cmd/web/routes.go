@@ -19,6 +19,8 @@ func (app *application) routes() http.Handler {
 	mux.Post("/addTaskPage", dynamicMiddleware1.ThenFunc(app.addTask))
 	mux.Post("/tasksdelete", dynamicMiddleware1.ThenFunc(app.deleteTask))
 	mux.Post("/updatetask", dynamicMiddleware1.ThenFunc(app.updateTask))
+	mux.Post("/spclAddtask",dynamicMiddleware.ThenFunc(app.spcl_taskAdd))
+	mux.Post("/spclDeletask",dynamicMiddleware.ThenFunc(app.spcl_taskDelete))
 
 	//User authentication
 	mux.Get("/user/signup", dynamicMiddleware.ThenFunc(app.signupUserForm))

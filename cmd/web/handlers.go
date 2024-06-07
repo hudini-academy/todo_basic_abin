@@ -26,15 +26,14 @@ var AllTasks []*models.ToDo
 // Id for task id
 var id int
 
-// create a handler for home
-// Change the signature of the home handler so it is defined as a method against *application.
+// Create a handler for home
 func (app *application) home(w http.ResponseWriter, r *http.Request) {
-	//Send a template which will take input of creating a task and listing all the taks
+	//Send a template which will take input of creating a task and listing all the tasks
 	// Parse and execute the template and pass allTasks as data
-	// if r.URL.Path != "/" {
-	// 	http.NotFound(w, r)
-	// 	return
-	// }
+	if r.URL.Path != "/" {
+		http.NotFound(w, r)
+		return
+	}
 
 	s, err := app.todo.GetAll()
 	if err != nil {
@@ -81,12 +80,7 @@ func (app *application) addTask(w http.ResponseWriter, r *http.Request) {
 		Id:   id,
 	}
 	if !app.dataValidate(r, task.Text) {
-		// // Check the data validation for the users entry.
-		// if strings.TrimSpace(task.Text) == "" {
-		// 	app.session.Put(r, "flash", "This field cannot be empty!!!!")
-		// } else if utf8.RuneCountInString(task.Text) > 100 {
-		// 	app.session.Put(r, "flash", "This field cannot be greater than 100!!!!")
-		// } else {
+		
 		//Inserting to db
 		_, err := app.todo.Insert(task.Text)
 		if err != nil {
@@ -97,22 +91,20 @@ func (app *application) addTask(w http.ResponseWriter, r *http.Request) {
 			app.session.Put(r, "flash", "Task added Successfully!!!!")
 
 		}
-
 	}
 	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
 
-// create a handler for deleting task
+// Create a handler for deleting task
 func (app *application) deleteTask(w http.ResponseWriter, r *http.Request) {
+	//Convert the string value and initializing it to idToDelete
 	idToDelete, _ := strconv.Atoi(r.FormValue("id"))
 	//log.Println(idToDelete);
 	errDel := app.todo.Delete(idToDelete)
-
 	if errDel != nil {
 		log.Println(errDel)
 	}
 	app.session.Put(r, "flash", "Task Deleted Successfully!!!!")
-
 	// Redirect to home page
 	http.Redirect(w, r, "/", http.StatusSeeOther)
 
@@ -162,6 +154,7 @@ func (app *application) signupUserForm(w http.ResponseWriter, r *http.Request) {
 	// 	})
 }
 func (app *application) signupUser(w http.ResponseWriter, r *http.Request) {
+
 	userName := r.FormValue("name")
 	userEmail := r.FormValue("email")
 	userPassword := r.FormValue("password")
@@ -176,11 +169,11 @@ func (app *application) signupUser(w http.ResponseWriter, r *http.Request) {
 		app.errorLog.Println(err.Error())
 		app.session.Put(r, "flash", "User already exist")
 		http.Redirect(w, r, "/user/signup", http.StatusSeeOther)
-		}else {
-			app.session.Put(r, "Authenticated", true)
-			app.session.Put(r, "flash", "Sign up successfull!")
-			http.Redirect(w, r, "/", http.StatusSeeOther)
-		}	
+	} else {
+		app.session.Put(r, "Authenticated", true)
+		app.session.Put(r, "flash", "Sign up successfull!")
+		http.Redirect(w, r, "/", http.StatusSeeOther)
+	}
 }
 func (app *application) loginUserForm(w http.ResponseWriter, r *http.Request) {
 	files := []string{
@@ -222,4 +215,33 @@ func (app *application) logoutUser(w http.ResponseWriter, r *http.Request) {
 	app.session.Put(r, "Authenticated", false)
 	http.Redirect(w, r, "/", http.StatusSeeOther)
 	app.session.Put(r, "flash", " Successfully Logged Out")
+}
+
+func (app *application) spcl_taskAdd(w http.ResponseWriter, r *http.Request) {
+	id += 1
+	task := Todo{
+		Text: r.FormValue("task"),
+		Id:   id,
+	}
+	if !app.dataValidate(r, task.Text) {
+		_, err := app.spcl_todo.SpclTaskAdd(task.Text)
+		if err != nil {
+			app.serverError(w, err)
+			log.Println(err)
+			return
+		} else {
+			app.session.Put(r, "flash", "Task added Successfully!!!!")
+		}
+	}
+	http.Redirect(w, r, "/", http.StatusSeeOther)
+}
+func (app *application) spcl_taskDelete(w http.ResponseWriter, r *http.Request) {
+	//Convert the string value and initializing it to idToDelete
+	idToDelete, _ := strconv.Atoi(r.FormValue("id"))
+	//log.Println(idToDelete);
+	errDel := app.spcl_todo.SpclTaskDelete(idToDelete)
+	if errDel != nil {
+		log.Println(errDel)
+	}
+	app.session.Put(r, "flash", "Task Deleted Successfully!!!!")
 }
