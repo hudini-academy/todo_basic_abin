@@ -17,4 +17,8 @@
             <input type='submit' value='Login'> 
         </div> 
 </form> 
+{{if .}}
+<div class ="flash">{{.}}</div>
+{{end}}
+<a href="/user/signup">Signup</a>
 {{end}}

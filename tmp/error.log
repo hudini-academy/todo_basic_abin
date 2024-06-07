@@ -422,3 +422,20 @@ ERROR	2024/06/06 19:49:40 handlers.go:205: models:invalid credentials
 ERROR	2024/06/06 19:53:36 handlers.go:205: models:invalid credentials
 ERROR	2024/06/06 19:55:07 handlers.go:205: models:invalid credentials
 ERROR	2024/06/06 19:56:09 handlers.go:205: models:invalid credentials
+ERROR	2024/06/06 20:23:06 handlers.go:204: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/06 20:23:07 handlers.go:204: models:invalid credentials
+ERROR	2024/06/06 20:23:33 handlers.go:204: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/06 20:27:04 handlers.go:204: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/06 20:30:17 handlers.go:204: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/06 20:30:29 handlers.go:204: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/06 20:34:20 handlers.go:204: models:invalid credentials
+ERROR	2024/06/07 00:32:49 handlers.go:204: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/07 00:39:08 handlers.go:204: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/07 00:51:52 handlers.go:204: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/07 00:52:58 handlers.go:204: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/07 00:54:42 handlers.go:204: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/07 00:57:57 handlers.go:204: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/07 00:59:24 handlers.go:204: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/07 01:06:37 handlers.go:204: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/07 10:24:25 handlers.go:206: crypto/bcrypt: hashedSecret too short to be a bcrypted password
+ERROR	2024/06/07 10:24:47 handlers.go:176: Error 1062 (23000): Duplicate entry 'abin.andrews@hudini.io' for key 'users.users_uc_email'

@@ -156,7 +156,7 @@ func (app *application) signupUserForm(w http.ResponseWriter, r *http.Request) {
 		app.serverError(w, err)
 		return
 	}
-	ts.Execute(w, nil)
+	ts.Execute(w, app.session.PopString(r, "flash"))
 	// 	app.render(w,r,"signup.page.tmpl",&templateData{
 	// 		Form: forms.New(nil),
 	// 	})
@@ -173,12 +173,14 @@ func (app *application) signupUser(w http.ResponseWriter, r *http.Request) {
 
 	err := app.users.Insert(userName, userEmail, hashedPassword)
 	if err != nil {
-		app.serverError(w, err)
-		log.Println(err)
-		return
-
-	}
-	http.Redirect(w, r, "/", http.StatusSeeOther)
+		app.errorLog.Println(err.Error())
+		app.session.Put(r, "flash", "User already exist")
+		http.Redirect(w, r, "/user/signup", http.StatusSeeOther)
+		}else {
+			app.session.Put(r, "Authenticated", true)
+			app.session.Put(r, "flash", "Sign up successfull!")
+			http.Redirect(w, r, "/", http.StatusSeeOther)
+		}	
 }
 func (app *application) loginUserForm(w http.ResponseWriter, r *http.Request) {
 	files := []string{
@@ -192,31 +194,32 @@ func (app *application) loginUserForm(w http.ResponseWriter, r *http.Request) {
 		app.serverError(w, err)
 		return
 	}
-	ts.Execute(w, nil)
+	ts.Execute(w, app.session.PopString(r, "flash"))
 
 }
 func (app *application) loginUser(w http.ResponseWriter, r *http.Request) {
 	userName := r.FormValue("email")
 	userPassword := r.FormValue("password")
 	isUser, err := app.users.Authenticate(userName, userPassword)
-	log.Print(isUser)
+	log.Println(isUser)
 	if err != nil {
 		app.errorLog.Println(err.Error())
 		http.Error(w, "Internal Server Error", 500)
 	}
-	if isUser != 0 {
-		app.session.Put(r, "Authenticate", true)
+	if isUser != -1 {
+		app.session.Put(r, "Authenticated", true)
 		app.session.Put(r, "flash", " Login Successfull!")
 		http.Redirect(w, r, "/", http.StatusSeeOther)
 
 	} else {
 		app.session.Put(r, "flash", " Login Failed!")
 		http.Redirect(w, r, "/user/login", http.StatusSeeOther)
-		app.session.Put(r, "Authenticate", true)
+		app.session.Put(r, "Authenticated", false)
 	}
 }
 
 func (app *application) logoutUser(w http.ResponseWriter, r *http.Request) {
 	app.session.Put(r, "Authenticated", false)
-	http.Redirect(w, r, "/user/login", http.StatusSeeOther)
+	http.Redirect(w, r, "/", http.StatusSeeOther)
+	app.session.Put(r, "flash", " Successfully Logged Out")
 }
